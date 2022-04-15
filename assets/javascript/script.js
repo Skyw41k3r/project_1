@@ -15,47 +15,21 @@ function searchSubmission(event) {
     }
 
 }
+//This code is for the fetch api//const encodedParams = new URLSearchParams();//
+encodedParams.append("accessToken", "<REQUIRED>");
+encodedParams.append("userId", "<REQUIRED>");
 
-searchForm.addEventListener('submit', searchSubmission);
-//This line is the anime list animeList//
-const settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://anilistmikilior1v1.p.rapidapi.com/getAnimeList",
-    "method": "POST",
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "X-RapidAPI-Host": "Anilistmikilior1V1.p.rapidapi.com",
-        "X-RapidAPI-Key": "cfbae33ec0mshf109c03e93a6396p1b5151jsnff154fb8b1f8"
+const options = {
+    method: 'POST',
+    headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'X-RapidAPI-Host': 'Anilistmikilior1V1.p.rapidapi.com',
+        'X-RapidAPI-Key': 'cfbae33ec0mshf109c03e93a6396p1b5151jsnff154fb8b1f8'
     },
-    "data": {
-        "accessToken": "<REQUIRED>",
-        "userId": "animeList"
-    }
+    body: encodedParams
 };
 
-$.ajax(settings).done(function(response) {
-    console.log(response);
-});
-
-//this line is the anime review(animeRev)
-const setting2 = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://anilistmikilior1v1.p.rapidapi.com/getReviews",
-    "method": "POST",
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "X-RapidAPI-Host": "Anilistmikilior1V1.p.rapidapi.com",
-        "X-RapidAPI-Key": "cfbae33ec0mshf109c03e93a6396p1b5151jsnff154fb8b1f8"
-    },
-    "data": {
-        "seriesType": "<REQUIRED>",
-        "id": "animeRev",
-        "accessToken": "<REQUIRED>"
-    }
-};
-
-$.ajax(settings).done(function(response) {
-    console.log(response);
-});
+fetch('https://anilistmikilior1v1.p.rapidapi.com/getAnimeList', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
