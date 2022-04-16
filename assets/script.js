@@ -12,7 +12,7 @@ function searchSubmission (event){
 }
 
 
-searchForm.addEventListener('submit', searchSubmission);
+
 
 // var buttonEl = document.querySelector("button");
 var caseK = "AIzaSyAuXIW5JqAMLqXas2a7CADZA-elSAnHb5w";
@@ -43,9 +43,8 @@ function onSearch(searchValue) {
 //    onSearch(value);
 //})
 
-searchForm.addEventListener('submit', searchSubmission){
+searchForm.addEventListener('submit', searchSubmission);
     event.preventDefault()
     var value = searchForm.value;
     console.log(value);
     onSearch(value);
-}
