@@ -1,4 +1,8 @@
 var searchForm = document.querySelector("#search-form");
+var buttonEl = document.querySelector("#username");
+var caseK = "AIzaSyAuXIW5JqAMLqXas2a7CADZA-elSAnHb5w";
+var vidIdTag;
+var vidUrl;
 
 function searchSubmission(event) {
     event.preventDefault();
@@ -10,14 +14,6 @@ function searchSubmission(event) {
         return;
     }
 }
-
-
-
-
-// var buttonEl = document.querySelector("button");
-var caseK = "AIzaSyAuXIW5JqAMLqXas2a7CADZA-elSAnHb5w";
-var vidIdTag;
-var vidUrl;
 
 function onSearch(searchValue) {
     var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20trailer&key=" + caseK;
@@ -36,22 +32,22 @@ function onSearch(searchValue) {
         })
 }
 
-//buttonEl.addEventListener("click", function(event){
-//    event.preventDefault()
-//    var value = searchForm.value;
-//    console.log(value);
-//    onSearch(value);
-//})
-
-searchForm.addEventListener('submit', searchSubmission);
+buttonEl.addEventListener("click", function(event){
     event.preventDefault()
     var value = searchForm.value;
     console.log(value);
     onSearch(value);
-searchForm.addEventListener('submit', function(event) {
+})
 
-    event.preventDefault();
-    var value = searchForm.value;
-    console.log(value);
-    onSearch(value);
-});
+//searchForm.addEventListener('submit', searchSubmission);
+//    event.preventDefault()
+//    var value = searchForm.value;
+//    console.log(value);
+//    onSearch(value);
+//searchForm.addEventListener('submit', function(event) {
+
+//    event.preventDefault();
+//    var value = searchForm.value;
+//    console.log(value);
+//    onSearch(value);
+//});
