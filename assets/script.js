@@ -1,11 +1,11 @@
 var searchEl = document.querySelector("#search");
 var buttonEl = document.querySelector("button");
-var apiKey = "AIzaSyAuXIW5JqAMLqXas2a7CADZA-elSAnHb5w";
+var caseK = "AIzaSyAuXIW5JqAMLqXas2a7CADZA-elSAnHb5w";
 var vidIdTag;
 var vidUrl;
 
 function onSearch(searchValue) {
-    var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20trailer&key=" + apiKey;
+    var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20trailer&key=" + caseK;
     fetch(requestURL) 
     .then(function(response){
         console.log(response);
