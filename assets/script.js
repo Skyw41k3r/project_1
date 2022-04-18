@@ -30,7 +30,28 @@ function onSearch(searchValue) {
         }).catch(function(error) {
             console.log(error);
         })
+
 }
+function onAnimeSearch(searchValue){
+    var requestURL = "https://api.jikan.moe/v4/anime?q=" + searchValue
+fetch(requestURL)
+.then(function(response) {
+    console.log(response);
+    return response.json();
+}).then(function(data) {
+    console.log(data);
+}).catch(function(error) {
+    console.log(error);
+})
+
+
+}
+document.getElementById("animeBtn").addEventListener("click", function(event){
+    event.preventDefault()
+    var value = document.getElementById("animeSearchBar").value;
+    console.log(value);
+    onAnimeSearch(value);
+})
 
 buttonEl.addEventListener("click", function(event){
     event.preventDefault()
