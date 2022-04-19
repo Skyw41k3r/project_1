@@ -110,8 +110,7 @@ document.getElementById("animeBtn").addEventListener("submit", function(event){
     event.preventDefault()
     var value = document.getElementById("animeSearchBar").value;
     console.log(value);
-    onAnimeSearch(value);
-})
+
 
 //buttonEl.addEventListener("click", searchSubmission)
 
