@@ -2,7 +2,7 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
- body {
+body {
     color: rgb(0, 0, 0);
 }
 
@@ -25,11 +25,13 @@ a {
     box-shadow: none;
     border-radius: 20px;
 }
+
 .primary-button {
     color: #fff;
     background: #1b98f8;
     margin: 1em 0;
 }
+
 .secondary-button {
     background: #fff;
     border: 1px solid #ddd;
@@ -42,7 +44,10 @@ a {
  * -- LAYOUT STYLES --
  * This layout consists of three main elements, `#nav` (navigation bar), `#list` (email list), and `#main` (email content). All 3 elements are within `#layout`
  */
-#layout, #nav, #list, #main {
+#layout,
+#nav,
+#list,
+#main {
     margin: 0;
     padding: 0;
 }
@@ -55,6 +60,7 @@ a {
     background: rgb(37, 42, 58);
     text-align: center;
 }
+
 /* Show the "Menu" button on phones */
 
 
@@ -82,36 +88,43 @@ a {
 }
 
 /* Email Content Styles */
-.email-content-header, .email-content-body, .email-content-footer {
+.email-content-header,
+.email-content-body,
+.email-content-footer {
     padding: 1em 2em;
 }
-    .email-content-header {
-        border-bottom: 1px solid #ddd;
-    }
 
-        .email-content-title {
-            margin: 0.5em 0 0;
-        }
-        .email-content-subtitle {
-            font-size: 1em;
-            margin: 0;
-            font-weight: normal;
-        }
-            .email-content-subtitle span {
-                color: #999;
-            }
-    .email-content-controls {
-        margin-top: 2em;
-        text-align: right;
-    }
-        .email-content-controls .secondary-button {
-            margin-bottom: 0.3em;
-        }
+.email-content-header {
+    border-bottom: 1px solid #ddd;
+}
 
-    .email-avatar {
-        width: 40px;
-        height: 40px;
-    }
+.email-content-title {
+    margin: 0.5em 0 0;
+}
+
+.email-content-subtitle {
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.email-content-subtitle span {
+    color: #999;
+}
+
+.email-content-controls {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.email-content-controls .secondary-button {
+    margin-bottom: 0.3em;
+}
+
+.email-avatar {
+    width: 40px;
+    height: 40px;
+}
 
 
 /*
@@ -123,20 +136,24 @@ a {
 
     /* Move the layout over so we can fit the nav + list in on the left */
     #layout {
-        padding-left:500px; /* "left col (nav + list)" width */
+        padding-left: 500px;
+        /* "left col (nav + list)" width */
         position: relative;
     }
 
     /* These are position:fixed; elements that will be in the left 500px of the screen */
-    #nav, #list {
+    #nav,
+    #list {
         position: fixed;
         top: 0;
         bottom: 0;
         overflow: auto;
     }
+
     #nav {
-        margin-left:-500px; /* "left col (nav + list)" width */
-        width:150px;
+        margin-left: -500px;
+        /* "left col (nav + list)" width */
+        width: 150px;
         height: 100%;
     }
 
@@ -165,7 +182,8 @@ a {
         bottom: 0;
         left: 150px;
         overflow: auto;
-        width: auto; /* so that it's not 100% */
+        width: auto;
+        /* so that it's not 100% */
     }
 
 }
@@ -180,7 +198,7 @@ a {
     /* This will take up the entire height, and be a little thinner */
     #list {
         margin-left: -350px;
-        width:350px;
+        width: 395px;
         height: 100%;
         border-right: 1px solid #ddd;
     }
@@ -191,46 +209,129 @@ a {
         margin: 0;
         padding: 0;
     }
-    #animeBtn{
+
+    #animeBtn {
         margin: 0 auto;
         display: block;
 
     }
-  
-    #animeSearchBar{
-background-color:beige;
-text-align: center;
-margin: 0 auto;
-display: block;
-    }
 
-    .searchAnimeTitle{
+    #animeSearchBar {
+        background-color: beige;
         text-align: center;
         margin: 0 auto;
         display: block;
-        
     }
 
-    #search_results.cards{
-width:100%;
+    .searchAnimeTitle {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
 
     }
-     .cards .card__name {
-        height: 40px;
+
+    #search_results.cards {
         width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        color: #343434;
-        font-weight: 700;
-     }
-     img{
-width: fit-content;
 
-     }
-     
+    }
+}
 
+.card {
+    height: 230px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    display: block;
+}
+
+.card__image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card__image {
+    height: 190px;
+    width: 100%;
+}
+
+.card__name {
+    height: 40px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#layout2 {
+    display: flex;
+}
+
+#list2 {
+    width: 50%;
+    width: 395px;
+}
+
+#main2 {
+    width: calc(100% - 495px);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#selectedCardDisplayArea {
+    text-align: center;
+}
+
+input[type=text] {
+    background: rgba(255,255,255,.05);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: transparent;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    outline: 0;
+    overflow: visible;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: auto 50px;
+    width: 50%;
+}
+
+#animeBtn {
+    background: rgba(255,255,255,.05);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-left: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: beige;
+    width: 100%;
 }
