@@ -98,18 +98,7 @@ fetch(requestURL)
 })
 
 
-function onAnimeSearch(searchValue) {
-    var requestURL = "https://api.jikan.moe/v4/anime?q=" + searchValue
-    fetch(requestURL)
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        }).then(function (data) {
-            console.log(data);
-        }).catch(function (error) {
-            console.log(error);
-        })
-}
+
 
 
 /*
@@ -120,7 +109,7 @@ buttonEl.addEventListener("click", function(event){
     onSearch(value);
 })
 */
-=======
+
 //document.getElementById("animeBtn").addEventListener("submit", function(event){
 //    event.preventDefault()
 //    var value = document.getElementById("animeSearchBar").value;
@@ -143,3 +132,4 @@ buttonEl.addEventListener("click", searchSubmission)
 //    console.log(value);
 //    onSearch(value);
 //});
+}
