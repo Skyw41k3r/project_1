@@ -9,48 +9,46 @@
 </head>
 <body>
 
-<div id="layout" class="content pure-g">
-    <div id="nav" class="pure-u">
-        <a href="#" id="menuLink" class="nav-menu-button">Menu</a>
-
-     
-    </div>
-
-    <div id="list" class="pure-u">
+<div id="layout2" class="content pure-g">
+    <div id="list2" class="pure-u">
         <div class="email-item email-item-selected pure-g">
           <div id="search_results" class="cards">
+
+         
+          
+
             
+
             </div>
             <div class="pure-u">
-               
             </div>
-
-           
       
         </div>
     </div>
 
-    <div id="main" class="pure-u-1">
+    <div id="main2" class="pure-u-1">
         <div class="email-content">
             <div class="email-content-header pure-g">
                 <div class="pure-u-1-2">
                     <h1 class="searchAnimeTitle">Search Anime!</h1>
-                    <input name="Search Anime" id="animeSearchBar" type="text"size=40 autofocus="true" class="form-input" placeholder="Search for an anime, e.g Jujutsu Kaisen" />
-                    <button type="submit" class="btn"id="animeBtn">Search!</button>
-              
+                    <div class="search-container">
+                        <div class="search">
+                            <input name="Search Anime" id="animeSearchBar" type="text" size=40 autofocus="true" class="form-input" placeholder="Search for an anime, e.g Jujutsu Kaisen" />
+                            <button type="submit" class="btn"id="animeBtn">Go</button>
+                        </div>
+                    </div>
                 </div>
-              
-            
-
             <div class="email-content-body">
-                
             </div>
         </div>
+        <div id="selectedCardDisplayArea"></div>
     </div>
+
 </div>
 <!-- Script to make the Menu link work -->
 <!-- Just stripped down version of the js/ui.js script for the side-menu layout -->
 <script>
+    /*
     function getElements() {
         return {
             menu: document.getElementById('nav'),
@@ -98,8 +96,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', handleEvent);
     });
+    */
 </script>
-<!--<script src="assets/script.js"></script>-->
+<script src="assets/script.js"></script>
 </body>
 </html>
     <!--<div class="card">

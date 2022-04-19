@@ -46,6 +46,58 @@ function onSearch(searchValue) {
     //         embed("https://www.youtube.com/watch?v=sGbxmsDFVnE");
 }
 
+
+function displayIndividualAnimeDetails(anime) {
+    console.log(anime);
+
+    document.getElementById('selectedCardDisplayArea').innerHTML = `
+                                                                    <div>
+                                                                        <h1>${anime.title}</h1>
+                                                                        <h6>${anime.synopsis}</h6>
+                                                                        <div>${anime.score}</div>
+                                                                    </div>
+                                                                `;
+}
+
+function displayAnimeCards(animes) {
+    let cardsMarkup = '';
+
+    animes.forEach((anime, index) => {
+        cardsMarkup += `<a href="#" class="card" data-card-index="${index}">
+                            <div class="card__image">
+                                <img loading="lazy" src="${anime.images.jpg.large_image_url}" alt="Cowboy Bebop">
+                            </div>
+                            <div class="card__name">
+                                <span>${anime.title}</span> 
+                            </div>
+                        </a>`;
+    })
+
+    document.getElementById('search_results').innerHTML = cardsMarkup;
+
+    document.querySelectorAll('.card').forEach(animeCard => {
+        animeCard.addEventListener('click', () => {
+            event.preventDefault();
+            const cardIndex = parseInt(animeCard.getAttribute('data-card-index'));
+            displayIndividualAnimeDetails(animes[cardIndex]);
+        });
+    });
+}
+
+function onAnimeSearch(searchValue){
+    var requestURL = "https://api.jikan.moe/v4/anime?q=" + searchValue
+fetch(requestURL)
+.then(function(response) {
+    console.log(response);
+    return response.json();
+}).then(function({data}) {
+    console.log(data);
+    displayAnimeCards(data);
+}).catch(function(error) {
+    console.log(error);
+})
+
+
 function onAnimeSearch(searchValue) {
     var requestURL = "https://api.jikan.moe/v4/anime?q=" + searchValue
     fetch(requestURL)
@@ -59,6 +111,16 @@ function onAnimeSearch(searchValue) {
         })
 }
 
+
+/*
+buttonEl.addEventListener("click", function(event){
+    event.preventDefault()
+    var value = searchForm.value;
+    console.log(value);
+    onSearch(value);
+})
+*/
+=======
 //document.getElementById("animeBtn").addEventListener("submit", function(event){
 //    event.preventDefault()
 //    var value = document.getElementById("animeSearchBar").value;
@@ -67,6 +129,7 @@ function onAnimeSearch(searchValue) {
 //})
 
 buttonEl.addEventListener("click", searchSubmission)
+
 
 //searchForm.addEventListener('submit', searchSubmission);
 //    event.preventDefault()
