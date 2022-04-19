@@ -120,15 +120,14 @@ buttonEl.addEventListener("click", function(event){
     onSearch(value);
 })
 */
-=======
-//document.getElementById("animeBtn").addEventListener("submit", function(event){
-//    event.preventDefault()
-//    var value = document.getElementById("animeSearchBar").value;
-//    console.log(value);
-//    onAnimeSearch(value);
-//})
 
-buttonEl.addEventListener("click", searchSubmission)
+document.getElementById("animeBtn").addEventListener("submit", function(event){
+    event.preventDefault()
+    var value = document.getElementById("animeSearchBar").value;
+    console.log(value);
+    onAnimeSearch(value);})
+
+//buttonEl.addEventListener("click", searchSubmission)
 
 
 //searchForm.addEventListener('submit', searchSubmission);
@@ -143,3 +142,4 @@ buttonEl.addEventListener("click", searchSubmission)
 //    console.log(value);
 //    onSearch(value);
 //});
+}
