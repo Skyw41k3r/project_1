@@ -3,7 +3,7 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
  body {
-    color: #333;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -56,79 +56,16 @@ a {
     text-align: center;
 }
 /* Show the "Menu" button on phones */
-#nav .nav-menu-button {
-    display: block;
-    top: 0.5em;
-    right: 0.5em;
-    position: absolute;
-}
+
 
 /* When "Menu" is clicked, the navbar should be 80% height */
-#nav.active {
-    height: 80%;
-}
-/* Don't show the navigation items... */
-.nav-inner {
-    display: none;
-}
-
-/* ...until the "Menu" button is clicked */
-#nav.active .nav-inner {
-    display: block;
-    padding: 2em 0;
-}
 
 
-/*
- * -- NAV BAR STYLES --
- * Styling the default .pure-menu to look a little more unique.
- */
-#nav .pure-menu {
-    background: transparent;
-    border: none;
-    text-align: left;
-}
-    #nav .pure-menu-link:hover,
-    #nav .pure-menu-link:focus {
-        background: rgb(55, 60, 90);
-    }
-    #nav .pure-menu-link {
-        color: #fff;
-        margin-left: 0.5em;
-    }
-    #nav .pure-menu-heading {
-        border-bottom: none;
-        font-size:110%;
-        color: rgb(75, 113, 151);
-    }
 
 
-/*
- * -- EMAIL STYLES --
- * Styles relevant to the email messages, labels, counts, and more.
- */
-.email-count {
-    color: rgb(75, 113, 151);
-}
 
-.email-label-personal,
-.email-label-work,
-.email-label-travel {
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    margin-right: 0.5em;
-    border-radius: 3px;
-}
-.email-label-personal {
-    background: #ffc94c;
-}
-.email-label-work {
-    background: #41ccb4;
-}
-.email-label-travel {
-    background: #40c365;
-}
+
+
 
 
 /* Email Item Styles */
@@ -137,28 +74,11 @@ a {
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
 }
-    .email-avatar {
-        border-radius: 3px;
-        margin-right: 0.5em;
-    }
-    .email-name,
-    .email-subject {
-        margin: 0;
-    }
-    .email-name {
-        text-transform: uppercase;
-        color: #999;
-    }
-    .email-desc {
-        font-size: 80%;
-        margin: 0.4em 0;
-    }
+
 
 .email-item-selected {
     background: #eee;
-}
-.email-item-unread {
-    border-left: 6px solid #1b98f8;
+
 }
 
 /* Email Content Styles */
@@ -271,4 +191,46 @@ a {
         margin: 0;
         padding: 0;
     }
+    #animeBtn{
+        margin: 0 auto;
+        display: block;
+
+    }
+  
+    #animeSearchBar{
+background-color:beige;
+text-align: center;
+margin: 0 auto;
+display: block;
+    }
+
+    .searchAnimeTitle{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        
+    }
+
+    #search_results.cards{
+width:100%;
+
+    }
+     .cards .card__name {
+        height: 40px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #343434;
+        font-weight: 700;
+     }
+     img{
+width: fit-content;
+
+     }
+     
+
 }
