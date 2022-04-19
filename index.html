@@ -9,139 +9,42 @@
 </head>
 <body>
 
-<div id="layout" class="content pure-g">
-    <div id="nav" class="pure-u">
-        <a href="#" id="menuLink" class="nav-menu-button">Menu</a>
-
-     
-    </div>
-
-    <div id="list" class="pure-u">
+<div id="layout2" class="content pure-g">
+    <div id="list2" class="pure-u">
         <div class="email-item email-item-selected pure-g">
           <div id="search_results" class="cards">
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/4/19644l.jpg" alt="Cowboy Bebop">
-                </div>
-                <div class="card__name">
-                    <span>Cowboy Bebop</span> 
-                </div>
-            </a>
-            <a href="" class="card">
-              <div class="card__image">
-                  <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/1171/109222l.jpg" alt="Jujutsu Kaisen (TV)">
-              </div>
-              <div class="card__name">
-                  <span>Jujutsu Kaisen (TV)</span> 
-              </div>
-          </a>
-          <a href="" class="card">
-            <div class="card__image">
-                <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/3/40451l.jpg" alt="Bleach">
-            </div>
-            <div class="card__name">
-                <span>Bleach</span> 
-            </div>
-        </a>
-        <a href="" class="card">
-          <div class="card__image">
-              <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/10/79352l.jpg" alt="Berserk">
-          </div>
-          <div class="card__name">
-              <span>Berserk</span> 
-          </div>
-      </a>
-
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/1439/93480l.jpg" alt="Cowboy Bebop: Tengoku no Tobira">
-                </div>
-                <div class="card__name">
-                    <span>Cowboy Bebop: Tengoku no Tobira</span> 
-                </div>
-            </a>
-  
-            
-            
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/9/10521l.jpg" alt="Initial D Fourth Stage">
-                </div>
-                <div class="card__name">
-                    <span>Initial D Fourth Stage</span> 
-                </div>
-            </a>
-            
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/10/18793l.jpg" alt="Monster">
-                </div>
-                <div class="card__name">
-                    <span>Monster</span> 
-                </div>
-            </a>
-            
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/13/17405l.jpg" alt="Naruto">
-                </div>
-                <div class="card__name">
-                    <span>Naruto</span> 
-                </div>
-            </a>
-            
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/6/73245l.jpg" alt="One Piece">
-                </div>
-                <div class="card__name">
-                    <span>One Piece</span> 
-                </div>
-            </a>
-          
-            
-          
-            
-            <a href="" class="card">
-                <div class="card__image">
-                    <img loading="lazy" src="https://cdn.myanimelist.net/images/anime/4/75488l.jpg" alt="School Rumble">
-                </div>
-                <div class="card__name">
-                    <span>School Rumble</span> 
-                </div>
-            </a>
+         
           
             </div>
             <div class="pure-u">
-               
             </div>
-
-           
       
         </div>
     </div>
 
-    <div id="main" class="pure-u-1">
+    <div id="main2" class="pure-u-1">
         <div class="email-content">
             <div class="email-content-header pure-g">
                 <div class="pure-u-1-2">
                     <h1 class="searchAnimeTitle">Search Anime!</h1>
-                    <input name="Search Anime" id="animeSearchBar" type="text"size=40 autofocus="true" class="form-input" placeholder="Search for an anime, e.g Jujutsu Kaisen" />
-                    <button type="submit" class="btn"id="animeBtn">Search!</button>
-              
+                    <div class="search-container">
+                        <div class="search">
+                            <input name="Search Anime" id="animeSearchBar" type="text" size=40 autofocus="true" class="form-input" placeholder="Search for an anime, e.g Jujutsu Kaisen" />
+                            <button type="submit" class="btn"id="animeBtn">Go</button>
+                        </div>
+                    </div>
                 </div>
-              
-            
-
             <div class="email-content-body">
-                
             </div>
         </div>
+        <div id="selectedCardDisplayArea"></div>
     </div>
+
 </div>
 <!-- Script to make the Menu link work -->
 <!-- Just stripped down version of the js/ui.js script for the side-menu layout -->
 <script>
+    /*
     function getElements() {
         return {
             menu: document.getElementById('nav'),
@@ -189,8 +92,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', handleEvent);
     });
+    */
 </script>
-<!--<script src="assets/script.js"></script>-->
+<script src="assets/script.js"></script>
 </body>
 </html>
     <!--<div class="card">
