@@ -6,12 +6,10 @@ var vidUrl;
 
 function searchSubmission(event) {
     event.preventDefault();
-
-    var value = searchForm.value;
+    var inputSearchEL = document.querySelector("#search-input").values();;
     console.log(value);
-    if (!value) {
+    if (!inputSearchEL) {
         console.error('Please enter Anime title!');
-        alert("Please enter Anime title!");
         return;
     }
     onSearch(value);
@@ -99,8 +97,6 @@ fetch(requestURL)
 
 
 
-
-
 /*
 buttonEl.addEventListener("click", function(event){
     event.preventDefault()
@@ -110,14 +106,14 @@ buttonEl.addEventListener("click", function(event){
 })
 */
 
-//document.getElementById("animeBtn").addEventListener("submit", function(event){
-//    event.preventDefault()
-//    var value = document.getElementById("animeSearchBar").value;
-//    console.log(value);
-//    onAnimeSearch(value);
-//})
+document.getElementById("animeBtn").addEventListener("submit", function(event){
+    event.preventDefault()
+    var value = document.getElementById("animeSearchBar").value;
+    console.log(value);
+    onAnimeSearch(value);
+})
 
-buttonEl.addEventListener("click", searchSubmission)
+//buttonEl.addEventListener("click", searchSubmission)
 
 
 //searchForm.addEventListener('submit', searchSubmission);
