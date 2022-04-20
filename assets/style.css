@@ -6,8 +6,21 @@ body {
     color: rgb(0, 0, 0);
 }
 
+html{
+    background: #36454F;
+}
 
+h1 {
+    color: #FFD700;
 
+}
+
+h6 {
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+
+}
 a {
     text-decoration: none;
     color: #1b98f8;
@@ -86,7 +99,7 @@ a {
 
 
 .email-item-selected {
-    background: #eee;
+    background: darkred;
 
 }
 
@@ -339,6 +352,7 @@ input[type=text] {
     border-left: solid rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     cursor: pointer;
-    background-color: #36454F;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(121,9,9,1) 75%, rgba(255,0,0,1) 100%);
     width: 100%;
 }
