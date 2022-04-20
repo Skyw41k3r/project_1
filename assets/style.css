@@ -67,7 +67,10 @@ a {
 /* When "Menu" is clicked, the navbar should be 80% height */
 
 
-
+.flex-container {
+    display:flex;
+    justify-content: center;
+}
 
 
 
