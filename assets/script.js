@@ -38,7 +38,8 @@ function onSearch(searchValue) {
 
 function displayIndividualAnimeDetails(anime) {
     console.log(anime);
-
+    var animeScore = anime.score;
+    if (animeScore != null) {
     document.getElementById('selectedCardDisplayArea').innerHTML = `
                                                                     <div>
                                                                         <h1>${anime.title}</h1>
@@ -46,6 +47,15 @@ function displayIndividualAnimeDetails(anime) {
                                                                         <div>${anime.score}</div>
                                                                     </div>
                                                                 `;
+    }
+    else {
+        document.getElementById('selectedCardDisplayArea').innerHTML = `
+                                                                    <div>
+                                                                        <h1>${anime.title}</h1>
+                                                                        <h6>${anime.synopsis}</h6>
+                                                                    </div>
+                                                                `;
+    }                                                            
 }
 
 function displayAnimeCards(animes) {
