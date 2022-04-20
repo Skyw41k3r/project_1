@@ -302,10 +302,12 @@ input[type=text] {
     background: rgba(255,255,255,.05);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     border-left: 1px solid rgba(0, 0, 0, 0.4);
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    border-right: transparent;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -329,12 +331,14 @@ input[type=text] {
     background: rgba(255,255,255,.05);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     border-right: 1px solid rgba(0, 0, 0, 0.4);
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    border-left: transparent;
+    border-left: solid rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     cursor: pointer;
-    background-color: beige;
+    background-color: #36454F;
     width: 100%;
 }
