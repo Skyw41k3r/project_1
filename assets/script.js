@@ -44,7 +44,7 @@ function displayIndividualAnimeDetails(anime) {
                                                                     <div>
                                                                         <h1>${anime.title}</h1>
                                                                         <h6>${anime.synopsis}</h6>
-                                                                        <div>${anime.score}</div>
+                                                                        <div><h2>Score: ${anime.score}</h2></div>
                                                                     </div>
                                                                 `;
     }
