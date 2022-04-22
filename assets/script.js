@@ -12,28 +12,28 @@ function searchSubmission(event) {
         alert("Please enter Anime title!");
         return;
     }
-    onSearch(inputSearchEL);
+    // onSearch(inputSearchEL);
     onAnimeSearch(inputSearchEL);
 }
-var embed = function (vidIdTag) {
-    var embedlink = "https://www.youtube.com/embed/" + vidIdTag;
-    document.getElementById("myIframe").src = embedlink;
-}
-function onSearch(searchValue) {
-    var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20anime%20trailer&key=" + caseK;
-    fetch(requestURL)
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        }).then(function (data) {
-            vidIdTag = data.items[0].id.videoId;
-            embed(vidIdTag)
-            console.log(vidIdTag);
-            console.log(data);
-        }).catch(function (error) {
-            console.log(error);
-        })
-}
+// var embed = function (vidIdTag) {
+//     var embLink = "https://www.youtube.com/embed/" + vidIdTag;
+//     document.getElementById("vidIframe").src = embLink;
+// }
+// function onSearch(searchValue) {
+//     var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20anime%20trailer&key=" + caseK;
+//     fetch(requestURL)
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         }).then(function (data) {
+//             vidIdTag = data.items[0].id.videoId;
+//             embed(vidIdTag)
+//             console.log(vidIdTag);
+//             console.log(data);
+//         }).catch(function (error) {
+//             console.log(error);
+//         })
+// }
 
 
 function displayIndividualAnimeDetails(anime) {
@@ -42,16 +42,16 @@ function displayIndividualAnimeDetails(anime) {
     if (animeScore != null) {
     document.getElementById('selectedCardDisplayArea').innerHTML = `
                                                                     <div>
-                                                                        <h1>${anime.title}</h1>
+                                                                        <h2>${anime.title}</h2>
                                                                         <h6>${anime.synopsis}</h6>
-                                                                        <div><h2>Score: ${anime.score}</h2></div>
+                                                                        <div><h2>Score: ${anime.score} /10</h2></div>
                                                                     </div>
                                                                 `;
     }
     else {
         document.getElementById('selectedCardDisplayArea').innerHTML = `
                                                                     <div>
-                                                                        <h1>${anime.title}</h1>
+                                                                        <h2>${anime.title}</h2>
                                                                         <h6>${anime.synopsis}</h6>
                                                                     </div>
                                                                 `;
