@@ -16,8 +16,8 @@ function searchSubmission(event) {
     onAnimeSearch(inputSearchEL);
 }
 // var embed = function (vidIdTag) {
-//     var embedlink = "https://www.youtube.com/embed/" + vidIdTag;
-//     document.getElementById("myIframe").src = embedlink;
+//     var embLink = "https://www.youtube.com/embed/" + vidIdTag;
+//     document.getElementById("vidIframe").src = embLink;
 // }
 // function onSearch(searchValue) {
 //     var requestURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + searchValue + "%20anime%20trailer&key=" + caseK;
