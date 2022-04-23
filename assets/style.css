@@ -1,56 +1,54 @@
 /* Color Variables */
 
 :root {
-    --bg-color:#36454F;
-    --text-color:#FFD700;
-    --light:#EEEEEE;
-    --medium:#00ADB5;
-    --dark:#303841;
-    
+    --bg-color: #36454F;
+    --text-color: #FFD700;
+    --light: #EEEEEE;
+    --medium: #00ADB5;
+    --dark: #303841;
 }
+
 
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+
 body {
     color: rgb(0, 0, 0);
     background-image: url(./image.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
 
-}*/
-
-
-html{
+*/ html {
     background: var(--bg-color);
 }
 
 h1 {
     color: var(--text-color);
     background: rgba(0, 0, 0, 0.4)
-
 }
 
 h2 {
-    color:var(--text-color);
+    color: var(--text-color);
     background: rgba(0, 0, 0, 0.8)
 }
 
-span{
+span {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 h6 {
     color: var(--light);
     font-size: 20px;
     font-family: monospace;
     background: rgba(0, 0, 0, 0.8)
-    
-
 }
+
 a {
     text-decoration: none;
     color: #1b98f8;
@@ -61,6 +59,7 @@ a {
  * -- HELPER STYLES --
  * Over-riding some of the .pure-button styles to make my buttons look unique
  */
+
 .primary-button,
 .secondary-button {
     -webkit-box-shadow: none;
@@ -83,10 +82,12 @@ a {
     font-size: 80%;
 }
 
+
 /*
  * -- LAYOUT STYLES --
  * This layout consists of three main elements, `#nav` (navigation bar), `#list` (email list), and `#main` (email content). All 3 elements are within `#layout`
  */
+
 #layout,
 #nav,
 #list,
@@ -95,7 +96,9 @@ a {
     padding: 0;
 }
 
+
 /* Make the navigation 100% width on phones */
+
 #nav {
     width: 100%;
     height: 40px;
@@ -104,36 +107,33 @@ a {
     text-align: center;
 }
 
+
 /* Show the "Menu" button on phones */
 
 
 /* When "Menu" is clicked, the navbar should be 80% height */
 
-
 .flex-container {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 
-
-
-
-
 /* Email Item Styles */
+
 .email-item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
 }
 
-
 .email-item-selected {
     background: var(--medium);
-
 }
 
+
 /* Email Content Styles */
+
 .email-content-header,
 .email-content-body,
 .email-content-footer {
@@ -178,15 +178,14 @@ a {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
-@media (min-width: 40em) {
 
+@media (min-width: 40em) {
     /* Move the layout over so we can fit the nav + list in on the left */
     #layout {
         padding-left: 500px;
         /* "left col (nav + list)" width */
         position: relative;
     }
-
     /* These are position:fixed; elements that will be in the left 500px of the screen */
     #nav,
     #list {
@@ -195,32 +194,27 @@ a {
         bottom: 0;
         overflow: auto;
     }
-
     #nav {
         margin-left: -500px;
         /* "left col (nav + list)" width */
         width: 150px;
         height: 100%;
     }
-
     /* Show the menu items on the larger screen */
     .nav-inner {
         display: block;
         padding: 2em 0;
     }
-
     /* Hide the "Menu" button on larger screens */
     #nav .nav-menu-button {
         display: none;
     }
-
     #list {
         margin-left: -350px;
         width: 100%;
         height: 33%;
         border-bottom: 1px solid #ddd;
     }
-
     #main {
         position: fixed;
         top: 33%;
@@ -231,16 +225,16 @@ a {
         width: auto;
         /* so that it's not 100% */
     }
-
 }
+
 
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large-sized devices, we want to customize some
  * of the mobile styles.
  */
-@media (min-width: 60em) {
 
+@media (min-width: 60em) {
     /* This will take up the entire height, and be a little thinner */
     #list {
         margin-left: -350px;
@@ -248,37 +242,29 @@ a {
         height: 100%;
         border-right: 1px solid #ddd;
     }
-
     /* This will now take up it's own column, so don't need position: fixed; */
     #main {
         position: static;
         margin: 0;
         padding: 0;
     }
-
     #animeBtn {
         margin: 0 auto;
         display: block;
-
     }
-
     #animeSearchBar {
         background-color: beige;
         text-align: center;
         margin: 0 auto;
         display: block;
     }
-
     .searchAnimeTitle {
         text-align: center;
         margin: 0 auto;
         display: block;
-
     }
-
     #search_results.cards {
         width: 100%;
-
     }
 }
 
@@ -332,7 +318,7 @@ a {
 }
 
 #main2 {
-    width: calc(100% - 495px);
+    width: calc(100% - 496px);
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -342,7 +328,7 @@ a {
 }
 
 input[type=text] {
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -372,7 +358,7 @@ input[type=text] {
 }
 
 #animeBtn {
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -385,29 +371,35 @@ input[type=text] {
     width: 100%;
     height: 25px;
 }
-  
-  .btn {
-    border-color:var(--text-color);
+
+.btn {
+    border-color: var(--text-color);
     color: black;
     box-shadow: 0 0 40px 40px var(--text-color) inset, 0 0 0 0 var(--text-color);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     font-size: 15px;
-      }
+}
+
 .btn:hover {
-        box-shadow: 0 0 10px 0 var(--text-color) inset, 0 0 10px 4px var(--text-color);
-        color: white;
-      }
-      footer {
-        display: flex;
-        justify-content: flex-end;
-        padding: 20px; 
-      }
-      #scrollToTopBtn {
-        background-color: black;
-        border: none;
-        color: white;
-        font-size: 18px;
-        line-height: 48px;
-        width: 48px;
-      }
+    box-shadow: 0 0 10px 0 var(--text-color) inset, 0 0 10px 4px var(--text-color);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+#scrollToTopBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 18px;
+    line-height: 48px;
+    width: 48px;
+}
+
+
+}
