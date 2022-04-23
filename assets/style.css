@@ -399,4 +399,6 @@ footer {
     font-size: 18px;
     line-height: 48px;
     width: 48px;
+    position: fixed;
+    bottom: 5px;
 }
